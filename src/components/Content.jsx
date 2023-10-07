@@ -5,7 +5,7 @@ export default function Content({ table }) {
         <div className="title z-index">
           <img
             className="lg:w-1/2 relative top-[100px] m-auto opacity-50 transform transition duration-1000 delay-75 hover:scale-90"
-            src="/src/assets/cripto-kingdom-title-bg.png"
+            src="../src/assets/cripto-kingdom-title-bg.png"
           ></img>
           <h1 className="relative bottom-[165px] lg:bottom-[400px] text-white text-3xl lg:text-7xl font-black">
             TRACK YOUR <br />
