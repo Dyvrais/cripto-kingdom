@@ -1,11 +1,14 @@
+import CKTitle from "../assets/cripto-kingdom-title-bg.png";
+import CKAbout from "../assets/crypto-kingdom-about-us.png";
+
 export default function Content({ table }) {
   return (
     <div className="main-container m-auto lg:m-20 text-center">
       <section id="home" className="home-prices">
-        <div className="title z-index">
+        <div className="title z-index lg:-mt-8">
           <img
             className="lg:w-1/2 relative top-[100px] m-auto opacity-50 transform transition duration-1000 delay-75 hover:scale-90"
-            src="./src/assets/cripto-kingdom-title-bg.png"
+            src={CKTitle}
           ></img>
           <h1 className="relative bottom-[165px] lg:bottom-[400px] text-white text-3xl lg:text-7xl font-black">
             TRACK YOUR <br />
@@ -77,7 +80,7 @@ export default function Content({ table }) {
             </p>
           </div>
           <img
-            src="./src/assets/crypto-kingdom-about-us.png"
+            src={CKAbout}
             className="mb-5 lg:mb-0 lg:w-1/4 bg-violet-500 rounded-full"
           ></img>
         </div>

@@ -1,12 +1,10 @@
+import cryptoKingdomLogo from "../assets/cripto-kingdom-logo.png";
 export default function Header() {
   return (
     <>
       <nav className="navbar z-10 flex bg-[#25093b] justify-around p-2 fixed top-0 w-[100%]">
         <div className="logo flex">
-          <img
-            src="./src/assets/cripto-kingdom-logo.png"
-            className="w-7 h-7 m-auto ml-2"
-          />
+          <img src={cryptoKingdomLogo} className="w-7 h-7 m-auto ml-2" />
           <h2 className="text-slate-100 m-auto invisible lg:visible lg:pl-3">
             CRYPTO KINGDOM
           </h2>
