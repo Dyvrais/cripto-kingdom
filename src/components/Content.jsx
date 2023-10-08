@@ -7,7 +7,7 @@ export default function Content({ table }) {
       <section id="home" className="home-prices">
         <div className="title z-index lg:-mt-8">
           <img
-            className="lg:w-1/2 relative top-[100px] m-auto opacity-50 transform transition duration-1000 delay-75 hover:scale-90"
+            className="md:w-1/2 lg:w-1/2 relative top-[100px] m-auto opacity-50 transform transition duration-1000 delay-75 hover:scale-90"
             src={CKTitle}
           ></img>
           <h1 className="relative bottom-[165px] lg:bottom-[400px] text-white text-3xl lg:text-7xl font-black">
