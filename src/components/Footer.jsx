@@ -21,6 +21,9 @@ export default function Footer() {
           style={{ color: "#f5f9ff" }}
         />
       </a>
+      <p>
+        <i className="text-white">Powered by CoinGecko</i>
+      </p>
     </footer>
   );
 }

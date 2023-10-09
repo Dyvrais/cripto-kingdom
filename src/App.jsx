@@ -10,27 +10,20 @@ function App() {
   const [table, setTable] = useState([]);
 
   useEffect(() => {
-    async function fetchExchangeRates() {
-      const assets = ["BTC", "ETH", "USDT"];
-      const promises = assets.map((asset) =>
-        axios.get(
-          `https://rest.coinapi.io/v1/exchangerate/${asset}/USD?apikey=FF00E707-6C4B-427B-AF21-9CB2462F5D7B`
-        )
-      );
-      const responses = await Promise.all(promises);
-      const exchangeRates = responses.reduce((acc, response, index) => {
-        acc[assets[index]] = response.data.rate;
-        return acc;
-      }, {});
-      setTable(exchangeRates);
-    }
-    fetchExchangeRates();
+    axios
+      .get(
+        `https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=20&page=1&sparkline=false&locale=en`
+      )
+      .then((res) => {
+        setTable(res.data);
+      })
+      .catch((err) => console.log(err));
   }, []);
 
   return (
     <main>
       <Header />
-      <Content table={table} />
+      <Content tableData={table} />
       <Footer />
     </main>
   );

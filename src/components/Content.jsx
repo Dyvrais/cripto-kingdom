@@ -1,7 +1,8 @@
 import CKTitle from "../assets/cripto-kingdom-title-bg.png";
 import CKAbout from "../assets/crypto-kingdom-about-us.png";
+import CoinTable from "./CoinTable";
 
-export default function Content({ table }) {
+export default function Content({ tableData }) {
   return (
     <div className="main-container m-auto lg:m-20 text-center">
       <section id="home" className="home-prices">
@@ -10,7 +11,7 @@ export default function Content({ table }) {
             className="md:w-1/2 lg:w-1/2 relative top-[100px] m-auto opacity-50 transform transition duration-1000 delay-75 hover:scale-90"
             src={CKTitle}
           ></img>
-          <h1 className="relative bottom-[165px] lg:bottom-[400px] text-white text-3xl lg:text-7xl font-black">
+          <h1 className="relative bottom-[165px] lg:bottom-[370px] text-white text-3xl lg:text-7xl font-black">
             TRACK YOUR <br />
             CRYPTOCURRENCIES
           </h1>
@@ -25,25 +26,7 @@ export default function Content({ table }) {
         <h2 id="prices" className="text-white text-xl lg:text-3xl p-1">
           Market Update
         </h2>
-        <table className="table-auto text-white w-[70%] m-auto">
-          <thead>
-            <tr>
-              <th className="bg-[#7319bd] rounded-l-lg p-2">Coin</th>
-              <th className="bg-[#7319bd] rounded-r-lg p-2">Exchange rate</th>
-            </tr>
-          </thead>
-          <tbody className="divide-y divide-white">
-            {Object.entries(table).map(([asset, exchangeRate]) => (
-              <tr
-                className="hover:bg-violet-950 hover:bg-opacity-30"
-                key={asset}
-              >
-                <td className="p-2 text-center">{asset}</td>
-                <td className="p-2 text-center">$ {exchangeRate}</td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
+        <CoinTable tableData={tableData} />
       </section>
 
       <section
@@ -53,7 +36,7 @@ export default function Content({ table }) {
         <h2 className="text-2xl lg:text-3xl mt-10 p-2 ">About Us</h2>
         <div className="flex flex-col-reverse lg:flex-row bg-[#7319bd] rounded-lg p-5 w-[80%] lg:w-[100%] m-auto">
           <div className="m-auto">
-            <p className="m-1 text-left text-base lg:text-lg">
+            <p className="m-1 mt-5 lg:mt-1 text-left text-base lg:text-lg">
               Welcome to Crypto Kingdom, your go-to website for tracking
               cryptocurrencies.
             </p>
@@ -81,7 +64,7 @@ export default function Content({ table }) {
           </div>
           <img
             src={CKAbout}
-            className="mb-5 lg:mb-0 lg:w-1/4 bg-violet-500 rounded-full"
+            className=" w-1/2 lg:w-1/4 m-auto bg-violet-500 rounded-full"
           ></img>
         </div>
       </section>
